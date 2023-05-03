@@ -29,6 +29,7 @@ function Destination(props) {
         alt="moon"
       />
       <div className="menu">
+        
         <p
           onClick={changePlanet}
           className={planet.name === "Moon" ? "clickedPlanet" : "planets"}

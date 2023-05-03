@@ -54,6 +54,8 @@ span {
   padding-bottom: 8px;
   position: relative;
   transition: all 0.3s ease;
+
+  
 }
 .clickedPlanet::after {
   content: "";
@@ -65,6 +67,7 @@ span {
   height: 3px;
   background-color: #ffffff;
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .planetName {
