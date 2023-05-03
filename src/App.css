@@ -1,0 +1,63 @@
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70%;
+  width: 100%;
+  margin-top: 24px;
+  margin-left: 6%;
+}
+.body {
+  height: 100%;
+  position: relative;
+}
+
+.right {
+  width: 60%;
+  position: absolute;
+  right: 0px;
+  padding-left: 32px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+}
+.iconClose {
+  width: 100%;
+  padding-right: 11%;
+  padding-top: 20%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 65px;
+}
+
+.active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.disabled {
+  display: none;
+}
+.routes{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.Link{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    margin-left: 11px;
+    cursor: pointer;
+}
+span{
+    color: #FFFFFF;
+    font-weight: 400;
+}

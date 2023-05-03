@@ -1,0 +1,44 @@
+.home{
+    background-image:url('../../assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;    
+    padding-top: 112px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.home_header{
+    font-size: 16px;
+    font-weight: 400;
+    color: #D0D6F9;
+    letter-spacing: 2.7px;
+    margin-bottom: 20px;
+}
+.title{
+    font-size: 80px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.paragraph{
+    font-size: 15px;
+    font-weight: 400;
+    color: #D0D6F9;
+    width: 85%;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 80px;
+}
+button{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(11, 13, 23, 1);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+}
