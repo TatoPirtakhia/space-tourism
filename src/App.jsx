@@ -5,11 +5,56 @@ import Destination from "./destination/destination";
 import Crew from "./crew/crew";
 import { useState } from "react";
 import Technology from "./technology/technology";
+import { getCrew, getDestination, getTechnology } from "./getData";
+import { useEffect } from "react";
 function App() {
   const [click, setClick] = useState(false);
-  const [destination,setDestination] = useState(false)
-  const [crew,setCrew] = useState(false)
-  const [technology,setTechnology] = useState(false)
+  const [destination, setDestination] = useState(true);
+  const [crew, setCrew] = useState(true);
+  const [technology, setTechnology] = useState(true);
+
+  const [destinationArry, setDestinationArry] = useState([]);
+  const [crewArry, setCrewArry] = useState([]);
+  const [technologyArray, setTechnologyArray] = useState([]);
+  
+  const clickDestination = async () => {
+    if (destination) {
+      // const Array = await getDestination();
+
+      setDestinationArry(await getDestination());
+      setDestination(false);
+      console.log(destinationArry);
+    }
+  };
+  useEffect(() => {
+    async function fetchDestination() {
+      if (destination) {
+        const Array = await getDestination();
+        setDestinationArry(Array);
+        setDestination(false);
+        console.log(destinationArry);
+      }
+    }
+    fetchDestination();
+  }, []);
+  const clickCrew = async () => {
+    if (crew) {
+      const Array = await getCrew();
+      setCrewArry(Array);
+      setCrew(false);
+      console.log(crewArry);
+    }
+  };
+
+  const clickTechnology = async () => {
+    if (technology) {
+      const Array = await getTechnology();
+      setTechnologyArray(Array);
+      setTechnology(false);
+      console.log(technologyArray);
+    }
+  };
+
   const clicked = () => {
     setClick(!click);
   };
@@ -27,7 +72,7 @@ function App() {
           width="48"
           height="48"
         >
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <circle cx="24" cy="24" r="24" fill="#FFF" />
             <path
               fill="#0B0D17"
@@ -43,7 +88,7 @@ function App() {
           width="24"
           height="21"
         >
-          <g fill="#D0D6F9" fill-rule="evenodd">
+          <g fill="#D0D6F9" fillRule="evenodd">
             <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
           </g>
         </svg>
@@ -57,7 +102,7 @@ function App() {
               width="20"
               height="21"
             >
-              <g fill="#D0D6F9" fill-rule="evenodd">
+              <g fill="#D0D6F9" fillRule="evenodd">
                 <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
                 <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
               </g>
@@ -72,20 +117,32 @@ function App() {
             </span>
             <span>
               01
-              <Link to="/destination" className="Link Condensed DESTINATION">
+              <Link
+                to="/destination"
+                onClick={clickDestination}
+                className="Link Condensed DESTINATION"
+              >
                 DESTINATION
               </Link>
             </span>
             <span>
               02
-              <Link to="/crew" className="Link Condensed CREW">
+              <Link
+                to="/crew"
+                onClick={clickCrew}
+                className="Link Condensed CREW"
+              >
                 CREW
               </Link>
             </span>
             <span>
               03
-              <Link to="/technology" className="Link Condensed TECHNOLOGY">
-                TECHNOLOGY 
+              <Link
+                to="/technology"
+                onClick={clickTechnology}
+                className="Link Condensed TECHNOLOGY"
+              >
+                TECHNOLOGY
               </Link>
             </span>
           </div>
@@ -94,8 +151,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
 
-        <Route path="/home" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
+        <Route
+          path="/home"
+          element={<Home clickDestination={clickDestination} />}
+        />
+        {destinationArry.length > 0 ? (
+          <Route
+            path="/destination"
+            element={<Destination destinationArry={destinationArry} />}
+          />
+        ) :''}
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
       </Routes>

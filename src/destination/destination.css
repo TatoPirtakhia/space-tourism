@@ -1,6 +1,109 @@
-.destination{
-    background-image: url('../../assets/destination/background-destination-mobile.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;  
+.destination {
+  background-image: url("../../assets/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 90px;
+}
+
+.destination_header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.des_title {
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+}
+span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 2.7px;
+}
+
+.menu {
+  display: flex;
+  gap: 27px;
+  margin-top: 30px;
+  margin-bottom: 31px;
+}
+.planets {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.3px;
+  font-weight: 400;
+  color: rgba(208, 214, 249, 1);
+  text-align: center;
+}
+.clickedPlanet {
+  font-family: "Barlow Condensed", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2.3px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  padding-bottom: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.clickedPlanet::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.planetName {
+  font-size: 56px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.destination_paragraph {
+  font-size: 15px;
+  font-weight: 400;
+  color: #d0d6f9;
+  width: 85%;
+  text-align: center;
+  line-height: 25px;
+  margin-bottom: 32px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 60px;
+}
+.footerdivs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color: #d0d6f9;
+}
+.numbers{
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }

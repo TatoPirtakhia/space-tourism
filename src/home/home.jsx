@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./home.css";
-function Home() {
+function Home(props) {
   return (
     <div className="home">
       <h2 className="Condensed home_header">SO, YOU WANT TO TRAVEL TO</h2>
@@ -11,7 +11,7 @@ function Home() {
         back, and relax because we’ll give you a truly out of this world
         experience!
       </p>
-      <Link to='/destination' ><button className="Bellefair ">EXPLORE</button></Link>
+      <Link to='/destination' onClick={props.clickDestination} ><button className="Bellefair ">EXPLORE</button></Link>
     </div>
   );
 }
