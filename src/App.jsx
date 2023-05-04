@@ -71,7 +71,7 @@ function App() {
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={click ? "disabled" : "hamburger"}
+          className={click ? "disabled" : "hamburger mobile"}
           onClick={clicked}
           width="24"
           height="21"
@@ -80,6 +80,31 @@ function App() {
             <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
           </g>
         </svg>
+        <div className="tablet">
+          <Link to="/home" className="Link Condensed HOME">
+            HOME
+          </Link>
+
+          <Link
+            to="/destination"
+            onClick={clickDestination}
+            className="Link Condensed DESTINATION"
+          >
+            DESTINATION
+          </Link>
+
+          <Link to="/crew" onClick={clickCrew} className="Link Condensed CREW">
+            CREW
+          </Link>
+
+          <Link
+            to="/technology"
+            onClick={clickTechnology}
+            className="Link Condensed TECHNOLOGY"
+          >
+            TECHNOLOGY
+          </Link>
+        </div>
       </header>
       <nav className={click ? "active" : "disabled"} onClick={clickNav}>
         <div className="right">
@@ -159,11 +184,13 @@ function App() {
         )}
 
         {technologyArray.length > 0 ? (
-          <Route path="/technology" element={<Technology technologyArray={technologyArray} />} />
+          <Route
+            path="/technology"
+            element={<Technology technologyArray={technologyArray} />}
+          />
         ) : (
           ""
         )}
-
       </Routes>
     </div>
   );

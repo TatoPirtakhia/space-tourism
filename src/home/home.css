@@ -2,11 +2,12 @@
     background-image:url('../../assets/home/background-home-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;    
+    min-height: 100vh;    
     padding-top: 112px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 .home_header{
     font-size: 16px;
@@ -41,4 +42,31 @@ button{
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 1.25px;
+}
+
+@media (min-width:768px) {
+    .home{
+        background-image:url('../../assets/home/background-home-tablet.jpg');
+        padding-top: 150px;
+    } 
+    .home_header{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 150px;
+        color: #FFFFFF;
+    }
+    .paragraph{
+        font-size: 16px;
+        width: 60%;
+        line-height: 28px;
+        margin-bottom: 130px;
+    }
+    button{
+        width: 242px;
+        height: 242px;
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
 }

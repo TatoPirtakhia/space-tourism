@@ -30,7 +30,7 @@ function Crew(props) {
       </div>
       <p className="Bellefair role ">{crew.role}</p>
       <h1 className="Bellefair name">{crew.name}</h1>
-      <p className="paragraph Barlow">{crew.bio}</p>
+      <p className="crew_paragraph Barlow">{crew.bio}</p>
     </div>
   );
 }

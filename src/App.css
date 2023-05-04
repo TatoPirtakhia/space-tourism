@@ -64,3 +64,43 @@ span {
   color: #ffffff;
   font-weight: 400;
 }
+.tablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100px;
+    gap: 7%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    -webkit-backdrop-filter: blur(40.7742px);
+  }
+  header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6%;
+    gap: 3%;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+  }
+  .Link {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+}
