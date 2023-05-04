@@ -54,8 +54,7 @@ span {
   padding-bottom: 8px;
   position: relative;
   transition: all 0.3s ease;
-
-  
+  z-index: 0;
 }
 .clickedPlanet::after {
   content: "";
@@ -67,7 +66,7 @@ span {
   height: 3px;
   background-color: #ffffff;
   transition: all 0.3s ease;
-  z-index: 2;
+  z-index: -1;
 }
 
 .planetName {
@@ -85,12 +84,15 @@ span {
   line-height: 25px;
   margin-bottom: 32px;
 }
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    margin-bottom: 60px;
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 60px;
+  border-top: 1px solid #383B4B ;
+  padding-top: 32px;
+  width: 85%;
 }
 .footerdivs {
   display: flex;
@@ -104,9 +106,9 @@ footer{
   letter-spacing: 2.5px;
   color: #d0d6f9;
 }
-.numbers{
-    font-size: 28px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #FFFFFF;
+.numbers {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
 }

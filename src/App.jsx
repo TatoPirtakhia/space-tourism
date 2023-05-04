@@ -14,35 +14,36 @@ function App() {
   const [technology, setTechnology] = useState(true);
 
   const [destinationArry, setDestinationArry] = useState([]);
-  const [crewArry, setCrewArry] = useState([]);
+  const [crewArray, setCrewArray] = useState([]);
   const [technologyArray, setTechnologyArray] = useState([]);
-  
+
   const clickDestination = async () => {
     if (destination) {
-      // const Array = await getDestination();
-
       setDestinationArry(await getDestination());
       setDestination(false);
-      console.log(destinationArry);
     }
   };
   useEffect(() => {
     async function fetchDestination() {
       if (destination) {
-        const Array = await getDestination();
-        setDestinationArry(Array);
+        setDestinationArry(await getDestination());
         setDestination(false);
-        console.log(destinationArry);
       }
     }
+    async function fetchCrew() {
+      if (crew) {
+        setCrewArray(await getCrew());
+        setCrew(false);
+      }
+    }
+    fetchCrew();
     fetchDestination();
   }, []);
+
   const clickCrew = async () => {
     if (crew) {
-      const Array = await getCrew();
-      setCrewArry(Array);
+      setCrewArray(await getCrew());
       setCrew(false);
-      console.log(crewArry);
     }
   };
 
@@ -160,8 +161,15 @@ function App() {
             path="/destination"
             element={<Destination destinationArry={destinationArry} />}
           />
-        ) :''}
-        <Route path="/crew" element={<Crew />} />
+        ) : (
+          ""
+        )}
+
+        {crewArray.length > 0 ? (
+          <Route path="/crew" element={<Crew crewArray={crewArray} />} />
+        ) : (
+          ""
+        )}
         <Route path="/technology" element={<Technology />} />
       </Routes>
     </div>
