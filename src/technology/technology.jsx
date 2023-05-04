@@ -25,6 +25,13 @@ function Technology(props) {
         className="mobile"
         alt="moon"
       />
+      <img
+        src={tech.images.landscape}
+        width="100%"
+        height="310"
+        className="tech_tablet"
+        alt="moon"
+      />
       <div className="tech_menu">
         <button onClick={changeLaunch} className={tech.id === 1? "clickedButton":"button"} >1</button>
         <button onClick={changeLaunch} className={tech.id === 2? "clickedButton":"button"} >2</button>

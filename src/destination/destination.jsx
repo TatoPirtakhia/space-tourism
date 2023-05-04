@@ -27,6 +27,13 @@ function Destination(props) {
         className="mobile"
         alt="moon"
       />
+       <img
+        src={planet.images.webp}
+        width={300}
+        height={300}
+        className="destination_tablet"
+        alt="moon"
+      />
       <div className="menu">
         
         <p

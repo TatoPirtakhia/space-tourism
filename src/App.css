@@ -60,6 +60,8 @@ header {
   margin-left: 11px;
   cursor: pointer;
 }
+
+
 span {
   color: #ffffff;
   font-weight: 400;
@@ -95,6 +97,21 @@ span {
     margin-left: 0%;
   }
   .Link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+  .clickedLink{
+    display: flex;
+    align-items: center;
+    height: 100%;
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
@@ -102,5 +119,7 @@ span {
     color: #ffffff;
     margin-left: 0px;
     cursor: pointer;
+    border-bottom: 3px solid #FFFFFF;
   }
+  
 }

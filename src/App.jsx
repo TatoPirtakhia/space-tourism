@@ -17,7 +17,12 @@ function App() {
   const [crewArray, setCrewArray] = useState([]);
   const [technologyArray, setTechnologyArray] = useState([]);
 
+  const [page,setPage] = useState('HOME')
+  const clickHome = () =>{
+    setPage('HOME')
+  }
   const clickDestination = async () => {
+    setPage('DESTINATION');
     if (destination) {
       setDestinationArry(await getDestination());
       setDestination(false);
@@ -26,10 +31,12 @@ function App() {
 
   const navigate = useNavigate();
   useEffect(() => {
+    setPage('HOME');
     navigate("/home");
   }, []);
 
   const clickCrew = async () => {
+    setPage('CREW');
     if (crew) {
       setCrewArray(await getCrew());
       setCrew(false);
@@ -37,6 +44,7 @@ function App() {
   };
 
   const clickTechnology = async () => {
+    setPage('TECHNOLOGY');
     if (technology) {
       setTechnologyArray(await getTechnology());
       setTechnology(false);
@@ -51,6 +59,8 @@ function App() {
       setClick(!click);
     }
   };
+  
+ 
   return (
     <div className="body">
       <header>
@@ -81,26 +91,26 @@ function App() {
           </g>
         </svg>
         <div className="tablet">
-          <Link to="/home" className="Link Condensed HOME">
+          <Link to="/home" onClick={clickHome} className={page === "HOME"?"clickedLink Condensed":"Link Condensed HOME"}>
             HOME
           </Link>
 
           <Link
             to="/destination"
             onClick={clickDestination}
-            className="Link Condensed DESTINATION"
+            className={page ==="DESTINATION" ?"clickedLink Condensed":"Link Condensed DESTINATION"}
           >
             DESTINATION
           </Link>
 
-          <Link to="/crew" onClick={clickCrew} className="Link Condensed CREW">
+          <Link to="/crew" onClick={clickCrew} className={page === "CREW" ?"clickedLink Condensed":"Link Condensed CREW"}>
             CREW
           </Link>
 
           <Link
             to="/technology"
             onClick={clickTechnology}
-            className="Link Condensed TECHNOLOGY"
+            className={page === "TECHNOLOGY" ?"clickedLink Condensed":"Link Condensed TECHNOLOGY"}
           >
             TECHNOLOGY
           </Link>

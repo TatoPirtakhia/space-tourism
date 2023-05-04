@@ -22,15 +22,36 @@ function Crew(props) {
         <p className="Condensed crew_title">Meet your crew</p>
       </div>
       <img src={crew.images.webp} height={222} className="mobile" alt="moon" />
-      <div className="crew_menu">
-        <div onClick={changeCrew} className={crew.id === 1 ? "clickedCircle" : "circle"} id="1"></div>
-        <div onClick={changeCrew} className={crew.id === 2 ? "clickedCircle" : "circle"} id="2"></div>
-        <div onClick={changeCrew} className={crew.id === 3 ? "clickedCircle" : "circle"} id="3"></div>
-        <div onClick={changeCrew} className={crew.id === 4 ? "clickedCircle" : "circle"} id="4"></div>
+      <div className="conainter">
+        <div className="crew_menu">
+          <div
+            onClick={changeCrew}
+            className={crew.id === 1 ? "clickedCircle" : "circle"}
+            id="1"
+          ></div>
+          <div
+            onClick={changeCrew}
+            className={crew.id === 2 ? "clickedCircle" : "circle"}
+            id="2"
+          ></div>
+          <div
+            onClick={changeCrew}
+            className={crew.id === 3 ? "clickedCircle" : "circle"}
+            id="3"
+          ></div>
+          <div
+            onClick={changeCrew}
+            className={crew.id === 4 ? "clickedCircle" : "circle"}
+            id="4"
+          ></div>
+        </div>
+        <div className="info">
+          <p className="Bellefair role ">{crew.role}</p>
+          <h1 className="Bellefair name">{crew.name}</h1>
+          <p className="crew_paragraph Barlow">{crew.bio}</p>
+        </div>
       </div>
-      <p className="Bellefair role ">{crew.role}</p>
-      <h1 className="Bellefair name">{crew.name}</h1>
-      <p className="crew_paragraph Barlow">{crew.bio}</p>
+      <img src={crew.images.webp} height={572}  className="crew_tablet" alt="moon" />
     </div>
   );
 }
