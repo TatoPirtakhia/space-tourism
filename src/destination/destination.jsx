@@ -3,7 +3,6 @@ import "./destination.css";
 
 function Destination(props) {
   const [planet, setPlanet] = useState(props.destinationArry[0]);
-  const data = props.destinationArry;
   const changePlanet = (event) => {
     if (event.target.textContent === "MOON") {
       setPlanet(props.destinationArry[0]);

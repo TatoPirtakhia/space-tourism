@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Link, Navigate, useNavigate } from "react-router-dom";
 import Home from "./home/home";
 import Destination from "./destination/destination";
 import Crew from "./crew/crew";
@@ -23,21 +23,10 @@ function App() {
       setDestination(false);
     }
   };
+
+  const navigate = useNavigate();
   useEffect(() => {
-    async function fetchDestination() {
-      if (destination) {
-        setDestinationArry(await getDestination());
-        setDestination(false);
-      }
-    }
-    async function fetchCrew() {
-      if (crew) {
-        setCrewArray(await getCrew());
-        setCrew(false);
-      }
-    }
-    fetchCrew();
-    fetchDestination();
+    navigate("/home");
   }, []);
 
   const clickCrew = async () => {
@@ -49,10 +38,8 @@ function App() {
 
   const clickTechnology = async () => {
     if (technology) {
-      const Array = await getTechnology();
-      setTechnologyArray(Array);
+      setTechnologyArray(await getTechnology());
       setTechnology(false);
-      console.log(technologyArray);
     }
   };
 
@@ -170,7 +157,13 @@ function App() {
         ) : (
           ""
         )}
-        <Route path="/technology" element={<Technology />} />
+
+        {technologyArray.length > 0 ? (
+          <Route path="/technology" element={<Technology technologyArray={technologyArray} />} />
+        ) : (
+          ""
+        )}
+
       </Routes>
     </div>
   );
