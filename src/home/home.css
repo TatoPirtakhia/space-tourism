@@ -9,6 +9,11 @@
     flex-direction: column;
     padding-bottom: 50px;
 }
+.home_box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .home_header{
     font-size: 16px;
     font-weight: 400;
@@ -42,6 +47,7 @@ button{
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 1.25px;
+    position: relative;
 }
 
 @media (min-width:768px) {
@@ -69,4 +75,65 @@ button{
         font-size: 32px;
         letter-spacing: 2px;
     }
+}
+@media (min-width:768px) {
+    .home{
+        background-image:url('../../assets/home/background-home-desktop.jpg');
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: row;
+        padding-bottom: 130px;
+        gap: 390px;
+    } 
+    .home_box{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 32%;
+        padding-bottom: 0px;
+    }
+    .home_header{
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    .title{
+        font-size: 150px;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    .paragraph{
+        font-size: 18px;
+        width: 96.5%;
+        line-height: 28px;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    button{
+        width: 274px;
+        height: 274px;
+        font-size: 32px;
+        letter-spacing: 2px;
+        position: relative;
+        transition: all 0.5s ease-out;
+    }
+    button:hover {
+        transform: scale(1.1);
+      }
+    
+    button:hover::after{
+        content: '';
+        cursor: pointer;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: all 0.5s ease-out;
+    }
+
 }

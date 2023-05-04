@@ -77,8 +77,8 @@ function App() {
               d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
             />
           </g>
-        </svg>
-
+        </svg>  
+        <div className="desktop_line"></div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={click ? "disabled" : "hamburger mobile"}
@@ -92,7 +92,7 @@ function App() {
         </svg>
         <div className="tablet">
           <Link to="/home" onClick={clickHome} className={page === "HOME"?"clickedLink Condensed":"Link Condensed HOME"}>
-            HOME
+            <apan className='desktop_span Condensed'>00</apan> HOME
           </Link>
 
           <Link
@@ -100,11 +100,11 @@ function App() {
             onClick={clickDestination}
             className={page ==="DESTINATION" ?"clickedLink Condensed":"Link Condensed DESTINATION"}
           >
-            DESTINATION
+            <apan className='desktop_span Condensed'>01</apan>DESTINATION
           </Link>
 
           <Link to="/crew" onClick={clickCrew} className={page === "CREW" ?"clickedLink Condensed":"Link Condensed CREW"}>
-            CREW
+          <apan className='desktop_span Condensed'>02</apan> CREW
           </Link>
 
           <Link
@@ -112,7 +112,7 @@ function App() {
             onClick={clickTechnology}
             className={page === "TECHNOLOGY" ?"clickedLink Condensed":"Link Condensed TECHNOLOGY"}
           >
-            TECHNOLOGY
+            <apan className='desktop_span Condensed'>03</apan>TECHNOLOGY
           </Link>
         </div>
       </header>

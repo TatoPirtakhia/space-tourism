@@ -23,13 +23,22 @@
   font-weight: 400;
   letter-spacing: 2.7px;
 }
-span {
+.des_span {
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.25);
   letter-spacing: 2.7px;
 }
-
+.desktop_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.menu_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .menu {
   display: flex;
   gap: 27px;
@@ -116,6 +125,9 @@ footer {
 .destination_tablet {
   display: none;
 }
+.desktop_planet {
+  display: none;
+}
 @media (min-width: 768px) {
   .destination_tablet {
     display: block;
@@ -138,7 +150,7 @@ footer {
     font-weight: 400;
     letter-spacing: 3.4px;
   }
-  span {
+  .des_span {
     font-size: 20px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.25);
@@ -183,5 +195,109 @@ footer {
   }
   .clickedPlanet {
     padding-bottom: 12px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .destination {
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    padding-top: 200px;
+  
+  }
+  .destination_tablet {
+    display: none;
+  }
+  .desktop_planet {
+    display: block;
+  }
+  .menu_container {
+    display: flex;
+    align-items: flex-start;
+    width: 445px;
+  }
+  .des_title {
+    font-size: 28px;
+    letter-spacing: 4.7px;
+  }
+  .des_span{
+    font-size: 28px;
+    letter-spacing: 3.4px;
+  }
+  .desktop_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 10%;
+  }
+  .menu {
+    display: flex;
+    gap: 27px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+
+  .planetName {
+    font-size: 100px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .destination_paragraph {
+    font-size: 18px;
+    font-weight: 400;
+    color: #d0d6f9;
+    width: 100%;
+    text-align: left;
+    line-height: 32px;
+    margin-bottom: 54px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10%;
+    margin-bottom: 0px;
+    border-top: 1px solid #383b4b;
+    padding-top: 32px;
+    width: 80%;
+  }
+  .footerdivs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    gap: 15px;
+  }
+  
+  .clickedPlanet {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    padding-bottom: 12px;
+    position: relative;
+  
+  }
+  .planets {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .planets:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+  .planets:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    z-index: -1;
   }
 }

@@ -17,62 +17,67 @@ function Destination(props) {
   return (
     <div className="destination">
       <div className="destination_header">
-        <span className="Condensed">01</span>
+        <span className="Condensed des_span">01</span>
         <p className="Condensed des_title">Pick your destination</p>
       </div>
-      <img
-        src={planet.images.webp}
-        width={170}
-        height={170}
-        className="mobile"
-        alt="moon"
-      />
-       <img
-        src={planet.images.webp}
-        width={300}
-        height={300}
-        className="destination_tablet"
-        alt="moon"
-      />
-      <div className="menu">
-        
-        <p
-          onClick={changePlanet}
-          className={planet.name === "Moon" ? "clickedPlanet" : "planets"}
-        >
-          MOON
-        </p>
-        <p
-          onClick={changePlanet}
-          className={planet.name === "Mars" ? "clickedPlanet" : "planets"}
-        >
-          MARS
-        </p>
-        <p
-          onClick={changePlanet}
-          className={planet.name === "Europa" ? "clickedPlanet" : "planets"}
-        >
-          EUROPA
-        </p>
-        <p
-          onClick={changePlanet}
-          className={planet.name === "Titan" ? "clickedPlanet" : "planets"}
-        >
-          TITAN
-        </p>
+      <div className="desktop_container">
+        <img
+          src={planet.images.webp}
+          width={170}
+          height={170}
+          className="mobile"
+          alt="planet"
+        />
+        <img
+          src={planet.images.webp}
+          width={300}
+          height={300}
+          className="destination_tablet"
+          alt="planet"
+        />
+
+        <img src={planet.images.webp} className="desktop_planet" alt="planet" />
+        <div className="menu_container">
+          <div className="menu">
+            <p
+              onClick={changePlanet}
+              className={planet.name === "Moon" ? "clickedPlanet" : "planets"}
+            >
+              MOON
+            </p>
+            <p
+              onClick={changePlanet}
+              className={planet.name === "Mars" ? "clickedPlanet" : "planets"}
+            >
+              MARS
+            </p>
+            <p
+              onClick={changePlanet}
+              className={planet.name === "Europa" ? "clickedPlanet" : "planets"}
+            >
+              EUROPA
+            </p>
+            <p
+              onClick={changePlanet}
+              className={planet.name === "Titan" ? "clickedPlanet" : "planets"}
+            >
+              TITAN
+            </p>
+          </div>
+          <h1 className="planetName Bellefair">{planet.name}</h1>
+          <p className="destination_paragraph  Barlow">{planet.description}</p>
+          <footer>
+            <div className="footerdivs">
+              <p className="text Condensed">AVG. DISTANCE</p>
+              <p className="Bellefair numbers">{planet.distance}</p>
+            </div>
+            <div className="footerdivs">
+              <p className="text  Condensed">Est. travel time</p>
+              <p className="numbers  Bellefair">{planet.travel}</p>
+            </div>
+          </footer>
+        </div>
       </div>
-      <h1 className="planetName Bellefair">{planet.name}</h1>
-      <p className="destination_paragraph  Barlow">{planet.description}</p>
-      <footer>
-        <div className="footerdivs">
-            <p className="text Condensed">AVG. DISTANCE</p>
-            <p className="Bellefair numbers">{planet.distance}</p>
-        </div>
-        <div className="footerdivs">
-            <p className="text  Condensed">Est. travel time</p>
-            <p className="numbers  Bellefair">{planet.travel}</p>
-        </div>
-      </footer>
     </div>
   );
 }
