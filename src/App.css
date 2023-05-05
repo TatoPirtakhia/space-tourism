@@ -132,8 +132,8 @@ span {
   .desktop_line {
     display: block;
     position: absolute;
-    width: 32%;
-    left: 15%;
+    width: 35%;
+    left: 11%;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.25);
     z-index: 11;
@@ -160,7 +160,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 6%;
+    padding-left: 4%;
     gap: 3%;
     width: 100%;
     margin-top: 40px;

@@ -14,7 +14,7 @@ function Home(props) {
         </p>
       </div>
       <Link to="/destination" onClick={props.clickDestination}>
-        <button className="Bellefair ">EXPLORE</button>
+        <button className="Bellefair homeButton">EXPLORE</button>
       </Link>
     </div>
   );

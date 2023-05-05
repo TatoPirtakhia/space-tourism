@@ -23,7 +23,7 @@
   font-weight: 400;
   letter-spacing: 2.7px;
 }
-span {
+.span {
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.25);
@@ -34,6 +34,21 @@ span {
   gap: 16px;
   margin-top: 34px;
   margin-bottom: 26px;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.techMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tech_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .button {
   width: 40px;
@@ -76,6 +91,9 @@ span {
 .tech_tablet {
   display: none;
 }
+.tech_desktop{
+  display: none;
+}
 @media (min-width: 768px) {
   .tech_tablet {
     display: block;
@@ -96,12 +114,12 @@ span {
     font-size: 20px;
     letter-spacing: 3.4px;
   }
-  span {
+  .span {
     font-size: 20px;
     letter-spacing: 3.4px;
   }
 
-.tech_menu {
+  .tech_menu {
     margin-top: 60px;
     margin-bottom: 44px;
   }
@@ -110,7 +128,7 @@ span {
     height: 60px;
     font-size: 24px;
   }
-  
+
   .clickedButton {
     width: 60px;
     height: 60px;
@@ -127,5 +145,89 @@ span {
     line-height: 28px;
     width: 58.795%;
     margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tech_desktop{
+    display: block;
+  }
+  .tech_tablet {
+    display: none;
+  }
+  .technology {
+    background-image: url("../../assets//technology/background-technology-desktop.jpg");
+    padding-top: 212px;
+  }
+  .main{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .tech_header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 60px;
+    width: 78%;
+  }
+  .tech_title {
+    font-size: 28px;
+    letter-spacing: 4.7px;
+  }
+  .span {
+    font-size: 28px;
+    letter-spacing: 4.7px;
+  }
+  .techMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+  .tech_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .tech_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+  }
+  .termin,.desktopName,.tech_paragraph{
+    margin-bottom: 20px;
+    padding-left: 10%;
+  }
+  .tech_paragraph {
+    font-size: 18px;
+    line-height: 32px;
+    width: 90%;
+    text-align: left;
+    margin-bottom: 0px;
+    height: 200px;
+  }
+  .button {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+  }
+  .button:hover{
+    border: 1px solid rgba(255, 255, 255, 1);
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+  }
+
+  .clickedButton {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
   }
 }

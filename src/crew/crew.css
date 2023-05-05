@@ -9,7 +9,11 @@
   flex-direction: column;
   padding-top: 90px;
 }
-
+.desktop_crew {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .crew_header {
   display: flex;
   align-items: center;
@@ -23,7 +27,7 @@
   font-weight: 400;
   letter-spacing: 2.7px;
 }
-span {
+.span {
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.25);
@@ -87,6 +91,9 @@ span {
 .crew_tablet {
   display: none;
 }
+.crew_desktop {
+  display: none;
+}
 @media (min-width: 768px) {
   .crew_tablet {
     display: block;
@@ -109,7 +116,7 @@ span {
     font-size: 20px;
     letter-spacing: 3.4px;
   }
-  span {
+  .span {
     font-size: 20px;
     letter-spacing: 3.4px;
   }
@@ -119,7 +126,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top:none;
+    border-top: none;
     gap: 17px;
     margin-bottom: 32px;
   }
@@ -131,11 +138,95 @@ span {
     font-size: 40px;
     margin-bottom: 16px;
   }
-  
+
   .crew_paragraph {
     font-size: 16px;
     text-align: center;
     line-height: 28px;
     width: 58.795%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .crew {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+    padding-top: 212px;
+    justify-content: flex-end;
+  }
+  .crew_desktop {
+    display: block;
+  }
+  .crew_tablet {
+    display: none;
+  }
+  .desktop_crew {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .crew_title {
+    font-size: 28px;
+    letter-spacing: 4.7px;
+  }
+  .span {
+    font-size: 28px;
+    letter-spacing: 4.7px;
+  }
+  .conainter {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 55%;
+    padding-left: 11%;
+    height: 100%;
+  }
+  .crew_header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: -10px;
+    width: 78%;
+  }
+  .info {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .crew_menu {
+    width: 100%;
+    padding-top: 0px;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+  }
+  .circle {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .circle:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+
+  }
+  .clickedCircle {
+    width: 15px;
+    height: 15px;
+  }
+  .role {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .name {
+    font-size: 56px;
+    margin-bottom: 30px;
+    height: 70px;
+  }
+  .crew_paragraph{
+    text-align: left;
+    font-size: 18px;
+    width: 70%;
+    height: 170px;
   }
 }

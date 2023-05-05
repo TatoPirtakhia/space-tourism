@@ -15,7 +15,7 @@ function Technology(props) {
   return (
     <div className="technology">
       <div className="tech_header">
-        <span className="Condensed">03</span>
+        <span className="Condensed span">03</span>
         <p className="Condensed tech_title">SPACE LAUNCH 101</p>
       </div>
       <img
@@ -32,14 +32,40 @@ function Technology(props) {
         className="tech_tablet"
         alt="moon"
       />
-      <div className="tech_menu">
-        <button onClick={changeLaunch} className={tech.id === 1? "clickedButton":"button"} >1</button>
-        <button onClick={changeLaunch} className={tech.id === 2? "clickedButton":"button"} >2</button>
-        <button onClick={changeLaunch} className={tech.id === 3? "clickedButton":"button"} >3</button>
+      <div className="main">
+      <img
+        src={tech.images.portrait}
+        className="tech_desktop"
+        alt="moon"
+      />
+        <div className="techMenu">
+            <div className="tech_menu">
+              <button
+                onClick={changeLaunch}
+                className={tech.id === 1 ? "clickedButton" : "button"}
+              >
+                1
+              </button>
+              <button
+                onClick={changeLaunch}
+                className={tech.id === 2 ? "clickedButton" : "button"}
+              >
+                2
+              </button>
+              <button
+                onClick={changeLaunch}
+                className={tech.id === 3 ? "clickedButton" : "button"}
+              >
+                3
+              </button>
+          </div>
+          <div className="tech_info">
+            <p className="termin Condensed">THE TERMINOLOGY…</p>
+            <h1 className="name desktopName Bellefair">{tech.name}</h1>
+            <p className="tech_paragraph Barlow">{tech.description}</p>
+          </div>
+        </div>
       </div>
-      <p className="termin Condensed">THE TERMINOLOGY…</p>
-      <h1 className="name Bellefair">{tech.name}</h1>
-      <p className="tech_paragraph Barlow">{tech.description}</p>
     </div>
   );
 }

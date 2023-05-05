@@ -199,7 +199,9 @@ footer {
 }
 
 @media (min-width: 1440px) {
-
+  .destination_header{
+    width: 78%;
+  }
   .destination {
     background-image: url("../../assets/destination/background-destination-desktop.jpg");
     padding-top: 200px;
